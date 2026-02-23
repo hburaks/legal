@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ritim | Kullanım Koşulları</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADHElEQVRYhe2X30+TVxyHn/NS+laRjCmlIJioDANlqSwgbq9ABJwuQTEw9MYfGV6YmCxsMbvX/8AsuxO9MMyYxWgTqm4xitXWTShkMJe2gZJ4NRBErKLSH7xnF9jKS+QOeW/4XL3nfN+T5/nnPXlPjmBBXC1aHnqyQ0ATUAJksTyJAiEkl18nnndGfo/EUgWReqhorj4kBReB7GWCLhER1vVky2PPQDgt8A7+20KhjxkJU8qc+GrwRu+IcLVoeUJPRvjoMzdGwD850bWVCnqyY6XhABJc05+8PaYIyf6Vhr+PflxBUGyegKhQgHXmCZCjmAgHYFVgVcCysCGEoFGrZ1elxmx8Fs+dmwQjIQBUq0rrNy04PytlbGKcq7euMfl8EgD7ejuHm9rItzsIRsJc/8NNLD5/3pQVl9L89X5sVhv+/of0/OVFSplmZuSXFp5NNQ40NvFjewebCorYUrSZRq2eR4MBpqPT/HTyNJEnEbrcl4m+ivJD+/fc7/ORabHw85lzVH7+BYWOjVSUuShyFOIL+Nm6aQvtbd9x/kon3l4fDVo9eRvsjDyJpAUMn6BBazAujyWTuupaVKvKujVZ3HnYQzwRJzQapm8ogLOkjPJt5eTbHYZxu6o0bKqNup11dLl/ZXzyKa/fzHD+ygVqdtQY3l20BySLI1N9i85J8a5DfmAMYFjmRYWlBe76ewzFRCKBr9dHLB5jZuYVe2v3sEa1UV7iZMf2KoIjIYLDQcYmxw3jfAE/sXiMB733Od56lI2OArKzsjl15CQPAn7jRLYfrE4rCSHY/eVuaqs0ZmOzdN/1EB4dBsCaaaV130GcJU7+mxjj6q1rTE1PAZD7aS6Hmr6lwJ5PcCSI+3Z3ehOWFm+jufEAqlXF3/8n9x55lxYwI6b/B1YFVgUU5i8NZuWlIiWDJgqMKih0mceXHmX9i7WXQD42gR616PovitfrTaKINglTKwiXSHliwDPwTAEYcvcNS32uRkJoBeBRpGwb6g5cB8hI9U4Mjz3LdeV0ZsypT4Ec5q9rtmWCziDkv0CnRdeP/u3pH0gV/geCahwg3/rkqwAAAABJRU5ErkJggg==" />
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2f4f36;
+      --accent-soft: #e7efea;
+      --border: #e7e5e4;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(28, 25, 23, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 0% -5%, #e7efea 0%, rgba(231, 239, 234, 0) 35%),
+        radial-gradient(circle at 100% 5%, #f4eee4 0%, rgba(244, 238, 228, 0) 35%),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      width: min(920px, 92vw);
+      margin: 40px auto 72px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #44403C 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 15px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 6px; }
+    p { margin: 0; }
+    p + p { margin-top: 8px; }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .muted { color: var(--muted); }
+    a { color: var(--accent); }
+
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+
+    .hero-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-brand">
+        <img class="hero-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADHElEQVRYhe2X30+TVxyHn/NS+laRjCmlIJioDANlqSwgbq9ABJwuQTEw9MYfGV6YmCxsMbvX/8AsuxO9MMyYxWgTqm4xitXWTShkMJe2gZJ4NRBErKLSH7xnF9jKS+QOeW/4XL3nfN+T5/nnPXlPjmBBXC1aHnqyQ0ATUAJksTyJAiEkl18nnndGfo/EUgWReqhorj4kBReB7GWCLhER1vVky2PPQDgt8A7+20KhjxkJU8qc+GrwRu+IcLVoeUJPRvjoMzdGwD850bWVCnqyY6XhABJc05+8PaYIyf6Vhr+PflxBUGyegKhQgHXmCZCjmAgHYFVgVcCysCGEoFGrZ1elxmx8Fs+dmwQjIQBUq0rrNy04PytlbGKcq7euMfl8EgD7ejuHm9rItzsIRsJc/8NNLD5/3pQVl9L89X5sVhv+/of0/OVFSplmZuSXFp5NNQ40NvFjewebCorYUrSZRq2eR4MBpqPT/HTyNJEnEbrcl4m+ivJD+/fc7/ORabHw85lzVH7+BYWOjVSUuShyFOIL+Nm6aQvtbd9x/kon3l4fDVo9eRvsjDyJpAUMn6BBazAujyWTuupaVKvKujVZ3HnYQzwRJzQapm8ogLOkjPJt5eTbHYZxu6o0bKqNup11dLl/ZXzyKa/fzHD+ygVqdtQY3l20BySLI1N9i85J8a5DfmAMYFjmRYWlBe76ewzFRCKBr9dHLB5jZuYVe2v3sEa1UV7iZMf2KoIjIYLDQcYmxw3jfAE/sXiMB733Od56lI2OArKzsjl15CQPAn7jRLYfrE4rCSHY/eVuaqs0ZmOzdN/1EB4dBsCaaaV130GcJU7+mxjj6q1rTE1PAZD7aS6Hmr6lwJ5PcCSI+3Z3ehOWFm+jufEAqlXF3/8n9x55lxYwI6b/B1YFVgUU5i8NZuWlIiWDJgqMKih0mceXHmX9i7WXQD42gR616PovitfrTaKINglTKwiXSHliwDPwTAEYcvcNS32uRkJoBeBRpGwb6g5cB8hI9U4Mjz3LdeV0ZsypT4Ec5q9rtmWCziDkv0CnRdeP/u3pH0gV/geCahwg3/rkqwAAAABJRU5ErkJggg==" alt="Ritim" />
+        <h1>Ritim Kullanım Koşulları</h1>
+      </div>
+      <p>Yürürlük tarihi: 20 Şubat 2026</p>
+      <p>Ritim uygulamasını kullanarak aşağıdaki koşulları kabul etmiş olursun.</p>
+    </section>
+
+    <section class="card">
+      <span class="pill">Kapsam</span>
+      <p>Ritim, öğrencilerin çalışma ritmini takip etmesini ve isteğe bağlı olarak koç bağlantısı kurmasını sağlayan bir mobil uygulamadır.</p>
+    </section>
+
+    <section class="card">
+      <h2>1) Uygunluk</h2>
+      <ul>
+        <li>Uygulama <strong>13 yaş ve üzeri</strong> kullanıcılar içindir.</li>
+        <li>Hesap bilgilerini doğru ve güncel tutmak kullanıcının sorumluluğundadır.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>2) Hesap ve Güvenlik</h2>
+      <ul>
+        <li>Google ile giriş akışında hesabının güvenliğinden sen sorumlusun.</li>
+        <li>Yetkisiz erişim şüphen varsa çıkış yapmalı ve hesabını güvene almalısın.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3) Kullanım Kuralları</h2>
+      <ul>
+        <li>Uygulamayı kötüye kullanacak, manipüle edecek veya hizmeti bozacak davranışlardan kaçınmalısın.</li>
+        <li>Başkalarına ait hesap/veri üzerinde yetkisiz işlem yapılamaz.</li>
+        <li>Uygulama içerisindeki metin, arayüz ve içeriklerin fikri hakları Ritim'e aittir.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4) Koç Bağlantısı</h2>
+      <p>Koça bağlandığında çalışma verilerin, bağlı olduğun koç tarafından görüntülenebilir.</p>
+      <p>Bağlantıyı uygulama içinden kesebilirsin.</p>
+    </section>
+
+    <section class="card">
+      <h2>5) Sorumluluk Sınırı</h2>
+      <ul>
+        <li>Ritim eğitim destek aracıdır; resmi sınav başarısı veya sonuç garantisi vermez.</li>
+        <li>Uygulama "olduğu gibi" sunulur.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>6) Hesabın Sonlandırılması</h2>
+      <p>Hesabını ve ilişkili verilerini silme talebini uygulamadaki ilgili bağlantıdan veya e-posta ile iletebilirsin.</p>
+      <p><a href="./account-deletion.html">Hesap ve Veri Silme sayfası</a></p>
+    </section>
+
+    <section class="card">
+      <h2>7) Koşulların Güncellenmesi</h2>
+      <p>Koşullar güncellendiğinde en güncel sürüm bu sayfada yayınlanır.</p>
+    </section>
+
+    <section class="card">
+      <h2>8) İletişim</h2>
+      <p>İletişim: <a href="mailto:hasanburaksongur@gmail.com">hasanburaksongur@gmail.com</a></p>
+    </section>
+  </main>
+</body>
+</html>

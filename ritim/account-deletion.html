@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ritim | Hesap ve Veri Silme</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADHElEQVRYhe2X30+TVxyHn/NS+laRjCmlIJioDANlqSwgbq9ABJwuQTEw9MYfGV6YmCxsMbvX/8AsuxO9MMyYxWgTqm4xitXWTShkMJe2gZJ4NRBErKLSH7xnF9jKS+QOeW/4XL3nfN+T5/nnPXlPjmBBXC1aHnqyQ0ATUAJksTyJAiEkl18nnndGfo/EUgWReqhorj4kBReB7GWCLhER1vVky2PPQDgt8A7+20KhjxkJU8qc+GrwRu+IcLVoeUJPRvjoMzdGwD850bWVCnqyY6XhABJc05+8PaYIyf6Vhr+PflxBUGyegKhQgHXmCZCjmAgHYFVgVcCysCGEoFGrZ1elxmx8Fs+dmwQjIQBUq0rrNy04PytlbGKcq7euMfl8EgD7ejuHm9rItzsIRsJc/8NNLD5/3pQVl9L89X5sVhv+/of0/OVFSplmZuSXFp5NNQ40NvFjewebCorYUrSZRq2eR4MBpqPT/HTyNJEnEbrcl4m+ivJD+/fc7/ORabHw85lzVH7+BYWOjVSUuShyFOIL+Nm6aQvtbd9x/kon3l4fDVo9eRvsjDyJpAUMn6BBazAujyWTuupaVKvKujVZ3HnYQzwRJzQapm8ogLOkjPJt5eTbHYZxu6o0bKqNup11dLl/ZXzyKa/fzHD+ygVqdtQY3l20BySLI1N9i85J8a5DfmAMYFjmRYWlBe76ewzFRCKBr9dHLB5jZuYVe2v3sEa1UV7iZMf2KoIjIYLDQcYmxw3jfAE/sXiMB733Od56lI2OArKzsjl15CQPAn7jRLYfrE4rCSHY/eVuaqs0ZmOzdN/1EB4dBsCaaaV130GcJU7+mxjj6q1rTE1PAZD7aS6Hmr6lwJ5PcCSI+3Z3ehOWFm+jufEAqlXF3/8n9x55lxYwI6b/B1YFVgUU5i8NZuWlIiWDJgqMKih0mceXHmX9i7WXQD42gR616PovitfrTaKINglTKwiXSHliwDPwTAEYcvcNS32uRkJoBeBRpGwb6g5cB8hI9U4Mjz3LdeV0ZsypT4Ec5q9rtmWCziDkv0CnRdeP/u3pH0gV/geCahwg3/rkqwAAAABJRU5ErkJggg==" />
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #2f4f36;
+      --accent-soft: #e7efea;
+      --border: #e7e5e4;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(28, 25, 23, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 0% -5%, #e7efea 0%, rgba(231, 239, 234, 0) 35%),
+        radial-gradient(circle at 100% 5%, #f4eee4 0%, rgba(244, 238, 228, 0) 35%),
+        var(--bg);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      width: min(920px, 92vw);
+      margin: 40px auto 72px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #44403C 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 15px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    ul, ol { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 6px; }
+
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 700;
+    }
+
+    .muted { color: var(--muted); }
+
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+    }
+
+    .hero-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-brand">
+        <img class="hero-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAADHElEQVRYhe2X30+TVxyHn/NS+laRjCmlIJioDANlqSwgbq9ABJwuQTEw9MYfGV6YmCxsMbvX/8AsuxO9MMyYxWgTqm4xitXWTShkMJe2gZJ4NRBErKLSH7xnF9jKS+QOeW/4XL3nfN+T5/nnPXlPjmBBXC1aHnqyQ0ATUAJksTyJAiEkl18nnndGfo/EUgWReqhorj4kBReB7GWCLhER1vVky2PPQDgt8A7+20KhjxkJU8qc+GrwRu+IcLVoeUJPRvjoMzdGwD850bWVCnqyY6XhABJc05+8PaYIyf6Vhr+PflxBUGyegKhQgHXmCZCjmAgHYFVgVcCysCGEoFGrZ1elxmx8Fs+dmwQjIQBUq0rrNy04PytlbGKcq7euMfl8EgD7ejuHm9rItzsIRsJc/8NNLD5/3pQVl9L89X5sVhv+/of0/OVFSplmZuSXFp5NNQ40NvFjewebCorYUrSZRq2eR4MBpqPT/HTyNJEnEbrcl4m+ivJD+/fc7/ORabHw85lzVH7+BYWOjVSUuShyFOIL+Nm6aQvtbd9x/kon3l4fDVo9eRvsjDyJpAUMn6BBazAujyWTuupaVKvKujVZ3HnYQzwRJzQapm8ogLOkjPJt5eTbHYZxu6o0bKqNup11dLl/ZXzyKa/fzHD+ygVqdtQY3l20BySLI1N9i85J8a5DfmAMYFjmRYWlBe76ewzFRCKBr9dHLB5jZuYVe2v3sEa1UV7iZMf2KoIjIYLDQcYmxw3jfAE/sXiMB733Od56lI2OArKzsjl15CQPAn7jRLYfrE4rCSHY/eVuaqs0ZmOzdN/1EB4dBsCaaaV130GcJU7+mxjj6q1rTE1PAZD7aS6Hmr6lwJ5PcCSI+3Z3ehOWFm+jufEAqlXF3/8n9x55lxYwI6b/B1YFVgUU5i8NZuWlIiWDJgqMKih0mceXHmX9i7WXQD42gR616PovitfrTaKINglTKwiXSHliwDPwTAEYcvcNS32uRkJoBeBRpGwb6g5cB8hI9U4Mjz3LdeV0ZsypT4Ec5q9rtmWCziDkv0CnRdeP/u3pH0gV/geCahwg3/rkqwAAAABJRU5ErkJggg==" alt="Ritim" />
+        <h1>Hesap ve Veri Silme Talebi</h1>
+      </div>
+      <p>Ritim hesabını ve ilişkili bulut verilerini silme talebini bu sayfa üzerinden başlatabilirsin.</p>
+    </section>
+
+    <section class="card">
+      <h2>1) Uygulama İçinden Silme</h2>
+      <p>Hesabını doğrudan uygulama içinden silebilirsin:</p>
+      <ol>
+        <li><strong>Ayarlar</strong> ekranına git.</li>
+        <li><strong>Hesap</strong> bölümüne gir.</li>
+        <li><strong>Hesabımı Sil</strong> butonuna bas ve onayla.</li>
+      </ol>
+      <p class="muted">Bu işlem hesabını ve buluttaki tüm verilerini kalıcı olarak siler.</p>
+    </section>
+
+    <section class="card">
+      <h2>2) E-posta ile Silme Talebi</h2>
+      <p>Uygulamaya erişemiyorsan e-posta ile de talep oluşturabilirsin:</p>
+      <ol>
+        <li>"Hesap ve Veri Silme" konulu e-posta gönder.</li>
+        <li>E-postaya hesabında kullandığın Google e-posta adresini ekle.</li>
+        <li>Mümkünse uygulama içindeki görünen adını da belirt.</li>
+      </ol>
+      <a class="cta" href="mailto:hasanburaksongur@gmail.com?subject=Ritim%20Hesap%20ve%20Veri%20Silme%20Talebi">Silme Talebi Gönder</a>
+    </section>
+
+    <section class="card">
+      <h2>3) Neler Silinir?</h2>
+      <ul>
+        <li>Hesap profili verisi (display name, bağlantı bilgileri).</li>
+        <li>Buluttaki günlük kayıt ve deneme kayıtları.</li>
+        <li>Koç-öğrenci ilişki kayıtları.</li>
+        <li>Hata teşhis kayıtları.</li>
+      </ul>
+      <p class="muted">Yasal saklama yükümlülüğü gerektiren kayıtlar varsa, sadece zorunlu kapsamda tutulabilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>4) Ne Kadar Sürer?</h2>
+      <p>Talepler makul süre içinde işleme alınır. Hedef süre: <strong>en geç 30 gün</strong>.</p>
+    </section>
+
+    <section class="card">
+      <h2>5) Başka Sorun mu Var?</h2>
+      <p>Herhangi bir sorunla karşılaşırsan <a href="mailto:hasanburaksongur@gmail.com">hasanburaksongur@gmail.com</a> adresine e-posta gönderebilirsin.</p>
+    </section>
+  </main>
+</body>
+</html>
